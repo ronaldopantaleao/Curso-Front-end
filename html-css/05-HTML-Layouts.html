@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+	<head>
+		<title>HTML - Layouts</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		* {
+			  box-sizing: border-box;
+			}
+			body {
+			  font-family: Arial, Helvetica, sans-serif;
+			}
+
+			/* Style the header */
+			header {
+			  background-color: #666;
+			  padding: 30px;
+			  text-align: center;
+			  font-size: 35px;
+			  color: white;
+			}
+
+			/* Create two columns/boxes that floats next to each other */
+			nav {
+			  float: left;
+			  width: 30%;
+			   
+			  background: #ccc;
+			  padding: 20px;
+			}
+
+			/* Style the list inside the menu */
+			nav ul {
+			  list-style-type: none;
+			  padding: 0;
+			}
+
+			article {
+			  float: left;
+			  padding: 20px;
+			  width: 70%;
+			  background-color: #f1f1f1;
+			}
+
+			/* Clear floats after the columns */
+			section::after {
+			  background: #ccc;
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+
+			/* Style the footer */
+			footer {
+			  background-color: #777;
+			  padding: 10px;
+			  text-align: center;
+			  color: white;
+			}
+
+			/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+			@media (max-width: 600px) {
+			  nav, article {
+			    width: 100%;
+			    height: auto;
+			  }
+			}
+			</style>
+	</head>
+	<body>
+
+		<header>
+			<h2>Curso Front-end - HTML</h2>
+		</header>
+
+		<section>
+
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#sobre">Sobre</a></li>
+					<li><a href="./06-formularios.html">Contato</a></li>
+				</ul>
+			</nav>
+
+			<article>
+				
+				<h1>Título Artigo</h1>
+
+				<p>velit phasellus condimentum facilisis aptent egestas. Sociosqu dolor penatibus fusce ligula rutrum a taciti class, molestie tortor ultrices conubia primis nunc ridiculus, amet sem efficitur est eget ex metus. Lacinia etiam velit phasellus luctus pellentesque habitasse scelerisque sociosqu nullam nascetur, feugiat accumsan magnis maximus condimentum sit nostra efficitur ad, vehicula rutrum ridiculus id metus tincidunt felis lobortis et. Netus curae est et ridiculus scelerisque quisque potenti, turpis facilisi finibus commodo odio vivamus, a taciti duis vulputate condimentum montes. Varius dictumst litora tempus morbi per convallis laoreet tincidunt eu, lorem vitae vestibulum sem hac platea dolor dui justo, cursus primis felis purus aliquam ac conubia ad. Tincidunt posuere dictum diam tempor orci dignissim dui, parturient lobortis congue condimentum vitae mus commodo placerat, sapien volutpat arcu fusce eros laoreet.</p>
+
+				<p>Est cubilia integer placerat facilisis iaculis condimentum odio taciti, elit quam interdum eget scelerisque arcu fusce nascetur, varius amet accumsan nullam dis ultrices ridiculus. Amet natoque cras duis leo suspendisse at magna, litora cubilia suscipit lorem pharetra tempor fusce, per imperdiet facilisis lectus nam nec. Commodo mi nostra justo vivamus in, fringilla orci himenaeos accumsan, porttitor fames feugiat fusce. Tortor penatibus vitae leo nunc.elit</p>
+
+			</article>
+
+		</section>
+
+		<footer>
+			<p>Desenvolvido por Ronaldo</p>
+		</footer>
+	</body>
+	</html>
